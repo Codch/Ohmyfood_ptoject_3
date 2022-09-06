@@ -42,8 +42,7 @@ $color-tertiary : #99E2D0;
         border: 6px solid transparent;
         border-top: 6px solid $color-primary;
         border-bottom: 6px solid $color-primary;
-        -webkit-animation: spinner 2s linear;
-                animation: spinner 2s linear;
+        animation: spinner 2s linear;
         visibility: hidden; 
         @include flexbox-center;
         }
@@ -54,7 +53,6 @@ $color-tertiary : #99E2D0;
             border: 6px solid transparent;
             border-left: 6px solid $color-secondary;
             border-right: 6px solid $color-secondary;
-            -webkit-animation: spinner 2s linear;
-                    animation: spinner 2s linear;
+            animation: spinner 2s linear;
         }
 }
