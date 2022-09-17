@@ -153,7 +153,7 @@ main{
     background-color: $backgroundgrey;
     @include flexbox-center();
     flex-direction: column;
-    padding: 40px 0;
+    padding: 40px 10%;
     >*{
         margin: 10px;
     }
@@ -191,6 +191,7 @@ main{
     &__title{
         font-family: "roboto", sans-serif;   
         align-self: flex-start;
+        font-weight: 800;
         margin: 20px 0 20px 6%;
     }
     &__steps{
@@ -207,6 +208,7 @@ main{
         height: 50px;
         border-radius: 30px;
         background-color: $backgroundgrey;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
         padding: 20px 0;
         gap: 20px;
         &:hover{
@@ -253,12 +255,19 @@ main{
     &__title{
         font-family: "roboto", sans-serif;
         font-weight: 800;
+        margin: 30px 0;
+    }
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
     &__card{
         position: relative;
         width: 100%;
         background-color: white;
         border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
         &:hover{
             transform: scale(1.03);
             transition: .5s;
@@ -304,4 +313,43 @@ main{
     -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
     }
+}
+
+.footer{
+    background-color: darken($backgroundgrey, $amount: 70);
+    display: flex;
+    justify-content: center;
+    &__bloc{
+        display: flex;
+        flex-direction: column;      
+        width: 90%;  
+        padding: 20px 0;
+        &-links{
+            display: flex;
+            flex-direction: column;  
+            width: auto;
+            gap: 10px;
+        }   
+        &-link{
+            display: flex;  
+            cursor: pointer;
+            color: white;         
+        }
+        & a{
+            color: white;
+        }
+        & i{
+            margin-right: 30px;
+            width: 5px;
+        }  
+    }
+    &__logo{
+        margin-bottom: 15px;
+        & a{
+        font-family: "Shrikhand", sans-serif;
+        font-size: 20px;
+        color: white;
+        }
+    }
+    
 }

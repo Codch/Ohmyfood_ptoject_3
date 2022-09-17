@@ -134,7 +134,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0;
+  padding: 40px 10%;
 }
 .explore > * {
   margin: 10px;
@@ -176,6 +176,7 @@ main {
 .process__title {
   font-family: "roboto", sans-serif;
   align-self: flex-start;
+  font-weight: 800;
   margin: 20px 0 20px 6%;
 }
 .process__steps {
@@ -192,6 +193,7 @@ main {
   height: 50px;
   border-radius: 30px;
   background-color: #f0f0f0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   padding: 20px 0;
   gap: 20px;
 }
@@ -239,12 +241,19 @@ main {
 .restaurants__title {
   font-family: "roboto", sans-serif;
   font-weight: 800;
+  margin: 30px 0;
+}
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .restaurants__card {
   position: relative;
   width: 100%;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .restaurants__card:hover {
   transform: scale(1.03);
@@ -290,6 +299,44 @@ main {
   background: #575757;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.footer {
+  background-color: #3e3e3e;
+  display: flex;
+  justify-content: center;
+}
+.footer__bloc {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0;
+}
+.footer__bloc-links {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 10px;
+}
+.footer__bloc-link {
+  display: flex;
+  cursor: pointer;
+  color: white;
+}
+.footer__bloc a {
+  color: white;
+}
+.footer__bloc i {
+  margin-right: 30px;
+  width: 5px;
+}
+.footer__logo {
+  margin-bottom: 15px;
+}
+.footer__logo a {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
