@@ -4,7 +4,7 @@
   "description": "OpenClassRoom_Project_3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./css/style.scss:./css/style.css",
+    "sass": "sass --watch ./css/style_index.scss:./css/style_index.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
