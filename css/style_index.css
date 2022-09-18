@@ -96,6 +96,7 @@ body {
 }
 
 .header {
+  position: relative;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -103,11 +104,22 @@ body {
   border-bottom: 2px solid rgba(0, 0, 0, 0.199);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.13);
 }
-
 .header__logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 40px;
   color: black;
+}
+.header__arrow-back {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  justify-self: flex-start;
+  left: 35px;
+  top: 35%;
+  font-size: 30px;
+}
+.header__arrow-back a {
+  color: #1a1a1a;
 }
 
 main {
@@ -148,7 +160,7 @@ main {
 }
 .explore__button {
   opacity: 1;
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: white;
   padding: 0 20px;
   border-radius: 200px;
@@ -157,7 +169,7 @@ main {
   height: 50px;
 }
 .explore__button:hover {
-  opacity: 0.8;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
@@ -213,7 +225,7 @@ main {
   gap: 20px;
 }
 .process__step:hover {
-  opacity: 0.8;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
@@ -344,7 +356,7 @@ main {
   left: 0px;
   opacity: 0;
   display: block;
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -391,6 +403,17 @@ main {
   font-family: "Shrikhand", sans-serif;
   font-size: 20px;
   color: white;
+}
+
+.menu__img {
+  width: 100%;
+  height: 50vh;
+}
+.menu__img__image {
+  margin-top: -5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style_index.css.map */
