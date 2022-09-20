@@ -449,8 +449,20 @@ main {
   gap: 10px;
 }
 .menu__step__title {
+  position: relative;
   font-weight: 400;
   color: #333333;
+  margin-bottom: 20px;
+}
+.menu__step__title:after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #99e2d0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
 }
 .menu__card {
   display: flex;
@@ -466,7 +478,7 @@ main {
   right: 0px;
 }
 .menu__card:hover .menu__card__dish-price {
-  width: calc(100% - 100px);
+  max-width: calc(100% - 100px);
 }
 .menu__card:hover .menu__card__animation__check {
   transform: rotate(0);
@@ -477,11 +489,15 @@ main {
   display: flex;
   justify-content: space-between;
   transition: all 500ms ease;
+  max-width: 100%;
 }
 .menu__card__dish {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 30px;
 }
 .menu__card__dish-title {
   font-weight: 600;
@@ -489,7 +505,10 @@ main {
 }
 .menu__card__dish-subtitle {
   font-size: 16px;
+}
+.menu__card__dish p {
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__card__price {
   font-size: 18px;
@@ -497,6 +516,7 @@ main {
   font-weight: bold;
   align-self: flex-end;
   margin-right: 10px;
+  margin-left: 30px;
 }
 .menu__card__animation {
   display: flex;
@@ -513,6 +533,32 @@ main {
   color: white;
   transform: rotate(-180deg);
   transition: all 0.5s;
+}
+.menu .menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu__button-button {
+  width: 50%;
+  opacity: 1;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  padding: 0 20px;
+  border-radius: 200px;
+  border: transparent;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu__button-button:hover {
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 /*# sourceMappingURL=style_index.css.map */

@@ -454,8 +454,19 @@ main{
         align-items: flex-start;
         gap: 10px;
         &__title{
+            position: relative;
             font-weight: 400;
             color: lighten($color: #000000, $amount: 20);
+            margin-bottom: 20px;
+            &:after {
+                content: '';
+                width: 50px;
+                height: 4px;
+                background: #99e2d0;
+                position: absolute;
+                z-index: 20;
+                left: 0px; bottom: -8px ;
+            }        
         }
     }
     &__card{
@@ -472,7 +483,7 @@ main{
                 right: 0px;
             }
             .menu__card__dish-price{
-                width: calc(100% - 100px);
+                max-width: calc(100% - 100px);
             }
             .menu__card__animation__check{
                 transform: rotate(0);
@@ -484,19 +495,25 @@ main{
             display: flex;
             justify-content: space-between;
             transition: all 500ms ease;
+            max-width: 100%;
         }
         &__dish{
             display: flex;
             flex-direction: column;
             gap: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-right: 30px;
             &-title{
                 font-weight: 600;
                 font-size: 20px;
             }
             &-subtitle{
-                font-size: 16px;
+                font-size: 16px;      
+            }
+            & p{
                 text-overflow: ellipsis;
-                
+                overflow: hidden;
             }
         }
         &__price{
@@ -505,6 +522,7 @@ main{
             font-weight: bold;
             align-self: flex-end;
             margin-right: 10px;
+            margin-left: 30px;
         }
         &__animation{
             display: flex;
@@ -519,7 +537,26 @@ main{
                 font-size: 30px;
                 color: white;
                 transform: rotate(-180deg);
-                transition: all 0.5s ;
+                transition: all 0.5s;
+            }
+        }
+    }
+    .menu__button{
+        @include flexbox-center();
+        &-button{
+        width: 50%;
+        opacity: 1;
+        background: $gradient;
+        color: white;
+        padding: 0 20px;
+        border-radius: 200px;
+        border: transparent;
+        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+        height: 50px;  
+        font-size: 18px;
+        @include flexbox-center();
+        &:hover{
+            @include button-hover();
             }
         }
     }
