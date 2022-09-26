@@ -532,6 +532,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .menu__header {
+    width: 50%;
+  }
+}
 .menu__header__title {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;

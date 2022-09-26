@@ -491,6 +491,9 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (min-width: 1200px){
+            width: 50%;
+        }
         &__title{
             font-family: "Shrikhand", sans-serif;
             font-weight: 500;
