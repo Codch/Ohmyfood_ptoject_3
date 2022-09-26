@@ -13,6 +13,12 @@ $backgroundgrey : #f0f0f0;
 $gradient : linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
 $lightengradient : linear-gradient(180deg, lighten($color-secondary, 5) 0%, lighten($color-primary, 5) 100%);
 
+
+@mixin card-delay{
+ 
+}
+
+
 @mixin flexbox-center {
     display: flex;
     justify-content: center;
@@ -25,6 +31,8 @@ $lightengradient : linear-gradient(180deg, lighten($color-secondary, 5) 0%, ligh
     transition: .3s;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
 }
+
+
 
 @-webkit-keyframes spinner{
     0% {
@@ -75,6 +83,25 @@ $lightengradient : linear-gradient(180deg, lighten($color-secondary, 5) 0%, ligh
         visibility: hidden;
         
 
+    }
+}
+
+
+@keyframes oneperone{
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
     }
 }
 
@@ -380,11 +407,21 @@ main{
         flex-direction: column;      
         width: 90%;  
         padding: 20px 0;
+        @media (min-width: 900px){
+            margin-bottom: 15px;
+            max-width: 900px;
+        }
         &-links{
             display: flex;
             flex-direction: column;  
             width: auto;
             gap: 10px;
+            @media (min-width: 900px){
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                max-width: 900px;
+            }
         }   
         &-link{
             display: flex;  
@@ -429,6 +466,13 @@ main{
 }
 
 .menu{
+    @for $i from 1 through 5{
+        @for $j from 1 through 4{
+            .menu__step:nth-of-type(#{$i}) .menu__card:nth-of-type(#{$j}){
+                animation-duration:#{.5s +(($j + (($i - 2) * 3)) * 100ms) - 100ms};
+            }
+        }
+    }
     padding: 5%;
     background-color: $backgroundgrey;
     border-radius: 80px 80px 0 0;
@@ -438,6 +482,11 @@ main{
     justify-content: center;
     z-index: 2;
     gap: 40px;
+    @media (min-width: 1200px){
+      align-items: center;
+
+        
+    }
     &__header{
         display: flex;
         justify-content: space-between;
@@ -448,11 +497,23 @@ main{
             font-size: 40px;
         }
     }
+    &__flex{
+        @media (min-width: 1200px){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 2vw;
+        } 
+    }
     &__step{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        margin-bottom: 20px;
+        @media (min-width: 1200px){
+            
+        }
         &__title{
             position: relative;
             font-weight: 400;
@@ -469,7 +530,8 @@ main{
             }        
         }
     }
-    &__card{
+    &__card{     
+        animation: oneperone ease-in;  
         display: flex;
         justify-content: flex-start;
         position: relative;
@@ -543,6 +605,9 @@ main{
     }
     .menu__button{
         @include flexbox-center();
+        @media (min-width: 1200px){
+            width: 50%;
+        }
         &-button{
         width: 50%;
         opacity: 1;
@@ -561,3 +626,8 @@ main{
         }
     }
 }
+
+
+    
+
+
