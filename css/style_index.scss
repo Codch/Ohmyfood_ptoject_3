@@ -505,7 +505,7 @@ main{
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            gap: 2vw;
+            gap: 10px;
         } 
     }
     &__step{
@@ -514,9 +514,6 @@ main{
         align-items: flex-start;
         gap: 10px;
         margin-bottom: 20px;
-        @media (min-width: 1200px){
-            
-        }
         &__title{
             position: relative;
             font-weight: 400;

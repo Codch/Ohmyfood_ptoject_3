@@ -547,7 +547,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 2vw;
+    gap: 10px;
   }
 }
 .menu__step {
